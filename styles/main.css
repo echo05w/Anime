@@ -1,0 +1,125 @@
+@import url(font.css);
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+:root{
+    --greenbg:#00edc9;
+    --greenText:#00edc196;
+    --darkblue:#0033ed96;
+    --gradient: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(98,7,104,1) 28%, rgba(9,121,108,1) 42%, rgba(173,6,158,1) 60%, rgba(255,218,0,0.10416666666666663) 93%);
+    --Comforta:'Comfota';
+    --Montserrat:'Montserrat';
+    --Roboto:'Roboto';
+}
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    border: none;
+    outline: none;
+    font-family: var(--Comforta);
+    font-weight: 700;
+    box-sizing: border-box;
+}
+
+
+.container{
+    max-width: 1140px;
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+   
+}
+.header__banner{
+  background: var(--gradient);
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  padding: 20px 0;
+  color: white;
+  gap: 50px;
+  font-weight: 400;
+}
+.header__nav{
+    background: black;
+    padding: 29px 0;
+}
+.header__nav-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header__nav-content ul{
+    display: flex;
+    gap: 30px;
+    
+}
+.header__nav-content ul a{
+    color: white;
+    font-size: 14px;
+    font-family: var(--Montserrat);
+    transition: .3s;
+}
+.header__nav-content ul a:hover{
+color: aqua;
+}
+.header__nav-content ul a::after{
+    content: '';
+    display: block;
+    height: 2px;
+    width: 115%;
+    background: aqua;
+   
+    border-radius: 20px 20px 0 0;
+    opacity: 0;
+    transition: .3s;
+}
+.header__nav-content ul a:hover::after{
+    opacity: 1;
+    transform: translateY(42px);
+}
+.header__content{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    background: url(../img/Narutoback.jpg),#00edc190;
+    background-blend-mode: darken;
+    background-size: cover;
+   background-attachment: fixed;
+}
+.header__content h1{
+    font-size: 64px;
+    font-family: var(--Comforta);
+}
+.header__content p{
+font-weight: 700;
+font-family: var(--Comforta);
+margin: 30px 0 50px;
+max-width: 570px;
+line-height: 24px;
+}
+.header__content-links{
+    gap: 30px; 
+    display: flex;
+}
+.btn{
+    background: var(--darkblue);
+    display: block;
+    padding: 17px 47px;
+    border-radius: 4px ;
+    color :white;
+    font-family: var(--Roboto);
+    font-weight: 500;
+    transition: .3s;
+}
+.btn:hover{
+    background-color: var(--greenbg);
+    color: purple;
+}
+.burger{
+    width: 25px;
+    height: 25px;
+    display: none;
+    visibility: hidden;
+}
